@@ -2,7 +2,16 @@ extends layout
 
 block content
   br
-  h2 Import CSV file using NodeJS and MongoDB
+  h3 Chose the .csv file for testing 
+  
+  form#uploadForm(ref='uploadForm' action='http://192.168.225.28:3000/upload' method='post' enctype='multipart/form-data'  )
+    input(type='file' name='sampleFile' class="form-control-file" id="exampleFormControlFile1"  )
+    br
+    input(type='submit' value='Upload!' class="btn btn-success")
+
+
+
+  br
   br
   p
    a(href='javascript:void(0)' class='btn btn-primary' id='importdata') Import CSV 
@@ -11,13 +20,27 @@ block content
   br  
   p#message.alert.alert-success(style='display:none')
   br
+
+  
+
   table.table.table-bordered
     thead
         tr
             th id
             th  m_id
+            th Transaction ID
+            th Transaction Time
             th result
+            th Merchant Category
+            
+            th Transaction Status 
+            th Transaction Place
+            th Transaction Type
+            th Customer Identification 
+            th Bank
             
     tbody#trdata
         tr
             td(colspan='3') Click on <strong>Import CSV</strong> button to import and save data to MongoDB. <br />Click on <strong>Fetch Data</strong> button to display data from database
+
+    

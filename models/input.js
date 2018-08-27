@@ -1,23 +1,31 @@
  var mongoose = require('mongoose');
  require('mongoose-double')(mongoose);
- var SchemaTypes = mongoose.Schema.Types;
-
-var Schema = mongoose.Schema;
-
-var inputSchema = new Schema({
-    //id: { type : Number},
-    result : {type : String}
-});
-
-module.exports = mongoose.model('Input', inputSchema);
- 
-// var SchemaTypes = mongoose.Schema.Types;
+//  var SchemaTypes = mongoose.Schema.Types;
 
 // var Schema = mongoose.Schema;
 
 // var inputSchema = new Schema({
+//     //id: { type : Number},
+//     result : {type : String}
+// });
 
-//   Time: { type: Number},
+// module.exports = mongoose.model('Input', inputSchema);
+ 
+var SchemaTypes = mongoose.Schema.Types;
+
+var Schema = mongoose.Schema;
+
+var inputSchema = new Schema({
+ trans_id : {type : Number}, 
+ Class : {type : Number},
+ MerchantCategoryCode : {type : String},
+ TransactionTime : {type : SchemaTypes.Double},
+ Transactionstatus : {type : String},
+ TransactionPlace : {type : String},
+ TransactionType : {type : String},
+ customeridentification : {type :SchemaTypes.Double },
+ BANK : { type: String }
+
 //   V1 : { type: SchemaTypes.Double } ,
 //   V2 : { type: SchemaTypes.Double } ,
 //   V3 : { type: SchemaTypes.Double } ,
@@ -35,23 +43,13 @@ module.exports = mongoose.model('Input', inputSchema);
 //   V15: { type: SchemaTypes.Double } ,
 //   V16: { type: SchemaTypes.Double } ,
 //   V17: { type: SchemaTypes.Double } ,
-//   V18: { type: SchemaTypes.Double } ,
-//   V19: { type: SchemaTypes.Double } ,
-//   V20: { type: SchemaTypes.Double } ,
-//   V21: { type: SchemaTypes.Double } ,
-//   V22: { type: SchemaTypes.Double } ,
-//   V23: { type: SchemaTypes.Double } ,
-//   V24: { type: SchemaTypes.Double } ,
-//   V25: { type: SchemaTypes.Double } ,
-//   V26: { type: SchemaTypes.Double } ,
-//   V27: { type: SchemaTypes.Double } ,
-//   V28: { type: SchemaTypes.Double } ,
-//   Amount: {type : SchemaTypes.Double }
-// });
+    // Amount : { type : SchemaTypes.Double},
+    // Fraud : {  type : SchemaTypes.Double }
+});
 
-// module.exports = mongoose.model('Input', inputSchema);
+module.exports = mongoose.model('Input', inputSchema);
 
- 
+// trans_id,Class,MerchantCategoryCode,TransactionTime,Transactionstatus,TransactionPlace,TransactionType,customeridentification,BANK
 
 // "Time","V1","V2","V3","V4","V5","V6","V7","V8","V9","V10","V11","V12","V13","V14","V15","V16","V17","V18",
 // "V19","V20","V21","V22","V23","V24","V25","V26","V27","V28","Amount","Class"

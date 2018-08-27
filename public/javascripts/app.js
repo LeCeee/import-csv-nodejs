@@ -16,7 +16,8 @@ $(function(){
 
             $.each(inputs, function(index, input ) {
 
-                string += '<tr><td>'+(index+1)+'</td><td>'+input['_id']+'</td><td>'+input['result']+'</td></tr>';
+                string += '<tr><td>'+(index+1)+'</td><td>'+input['_id']+'</td><td>'+input['trans_id']+'</td><td>'+input['TransactionTime']+'</td><td>'+input['Class']+'</td><td>'+input['MerchantCategoryCode']+'</td><td>'+input['Transactionstatus']+'</td><td>'+input['TransactionPlace']+'</td><td>'+input['TransactionType']+'</td><td>'+input['customeridentification']+'</td><td>'+input['BANK']+'</td></tr>';
+//                                                                          trans_id,Class,MerchantCategoryCode,TransactionTime,Transactionstatus,TransactionPlace,TransactionType,customeridentification,BANK
 
             });
 
